@@ -21,9 +21,8 @@ import (
 	"fmt"
 	"time"
 
-	bootstrapclusterxk8siov1alpha4 "github.com/AlexsJones/cluster-api-bootstrap-provider-microk8s/apis/v1alpha4"
-	"github.com/AlexsJones/cluster-api-bootstrap-provider-microk8s/apis/v1beta1"
-	bootstrapclusterxk8siov1beta1 "github.com/AlexsJones/cluster-api-bootstrap-provider-microk8s/apis/v1beta1"
+	bootstrapclusterxk8siov1alpha4 "github.com/AlexsJones/cluster-api-bootstrap-provider-microk8s/api/v1alpha4"
+	bootstrapclusterxk8siov1beta1 "github.com/AlexsJones/cluster-api-bootstrap-provider-microk8s/api/v1beta1"
 	cloudinit "github.com/AlexsJones/cluster-api-bootstrap-provider-microk8s/controllers/cloudinit"
 	"github.com/AlexsJones/cluster-api-bootstrap-provider-microk8s/controllers/locking"
 
@@ -487,7 +486,7 @@ func (r *MicroK8sConfigReconciler) MachineToBootstrapMapFunc(o client.Object) []
 }
 
 func (r *MicroK8sConfigReconciler) reconcileTopLevelObjectSettings(ctx context.Context,
-	cluster *clusterv1.Cluster, machine *clusterv1.Machine, config *v1beta1.MicroK8sConfig) {
+	cluster *clusterv1.Cluster, machine *clusterv1.Machine, config *bootstrapclusterxk8siov1beta1.MicroK8sConfig) {
 	_ = ctrl.LoggerFrom(ctx)
 
 	// If there is no ControlPlaneEndpoint defined in ClusterConfiguration but

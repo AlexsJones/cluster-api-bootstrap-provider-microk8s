@@ -30,7 +30,7 @@ import (
 	logf "sigs.k8s.io/controller-runtime/pkg/log"
 	"sigs.k8s.io/controller-runtime/pkg/log/zap"
 
-	bootstrapclusterxk8siov1alpha4 "github.com/AlexsJones/cluster-api-bootstrap-provider-microk8s/apis/v1alpha4"
+	bootstrapclusterxk8siov1alpha4 "github.com/AlexsJones/cluster-api-bootstrap-provider-microk8s/api/v1alpha4"
 	//+kubebuilder:scaffold:imports
 )
 

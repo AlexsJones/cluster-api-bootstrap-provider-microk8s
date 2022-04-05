@@ -34,7 +34,7 @@ import (
 	"k8s.io/component-base/logs"
 	"k8s.io/klog/v2/klogr"
 
-	bootstrapclusterxk8siov1alpha4 "github.com/AlexsJones/cluster-api-bootstrap-provider-microk8s/apis/v1alpha4"
+	bootstrapclusterxk8siov1alpha4 "github.com/AlexsJones/cluster-api-bootstrap-provider-microk8s/api/v1alpha4"
 	"github.com/AlexsJones/cluster-api-bootstrap-provider-microk8s/controllers"
 
 	"k8s.io/apimachinery/pkg/runtime"
@@ -49,7 +49,7 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/healthz"
 	"sigs.k8s.io/controller-runtime/pkg/log/zap"
 
-	bootstrapclusterxk8siov1beta1 "github.com/AlexsJones/cluster-api-bootstrap-provider-microk8s/apis/v1beta1"
+	bootstrapclusterxk8siov1beta1 "github.com/AlexsJones/cluster-api-bootstrap-provider-microk8s/api/v1beta1"
 
 	//+kubebuilder:scaffold:imports
 	expv1 "sigs.k8s.io/cluster-api/exp/api/v1beta1"
