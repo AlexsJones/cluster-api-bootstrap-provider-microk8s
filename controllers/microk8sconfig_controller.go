@@ -228,10 +228,10 @@ func (r *MicroK8sConfigReconciler) handleClusterNotInitialized(ctx context.Conte
 	}
 
 	// if the machine has not ClusterConfiguration and InitConfiguration, requeue
-	if scope.Config.Spec.InitConfiguration == nil && scope.Config.Spec.ClusterConfiguration == nil {
-		scope.Info("Control plane is not ready, requeing joining control planes until ready.")
-		return ctrl.Result{RequeueAfter: 30 * time.Second}, nil
-	}
+	// if scope.Config.Spec.InitConfiguration == nil && scope.Config.Spec.ClusterConfiguration == nil {
+	// 	scope.Info("Control plane is not ready, requeing joining control planes until ready.")
+	// 	return ctrl.Result{RequeueAfter: 30 * time.Second}, nil
+	// }
 
 	machine := &clusterv1.Machine{}
 	if err := runtime.DefaultUnstructuredConverter.FromUnstructured(scope.ConfigOwner.Object, machine); err != nil {
