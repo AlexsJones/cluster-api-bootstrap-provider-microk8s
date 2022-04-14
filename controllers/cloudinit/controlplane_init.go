@@ -23,7 +23,7 @@ import (
 const (
 	controlPlaneCloudInit = `{{.Header}}
 runcmd:
-  - 'snap install microk8s --classic'
+  - 'sudo snap install microk8s --classic'
 `
 )
 
@@ -31,7 +31,6 @@ runcmd:
 type ControlPlaneInput struct {
 	BaseUserData
 	secret.Certificates
-
 	ClusterConfiguration string
 	InitConfiguration    string
 }
