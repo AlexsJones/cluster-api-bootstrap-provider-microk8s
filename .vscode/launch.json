@@ -12,7 +12,7 @@
             "program": ".",
             "args": [
                 "--kubeconfig",
-                "/Users/alexjones/.kube/config",
+                "/home/foo/.kube/config",
             ],
         }
     ]

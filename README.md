@@ -1,15 +1,15 @@
-
-
-
 ## cluster-api-bootstrap-provider-microk8s
 
-This project currently combines both the bootstrap and controlplane controllers into a single process.
 
-<img src="images/microk8s.png" width="400px" />
+### Requirements
 
-![arch](images/arch.png)
+- Golang 1.17
+- gcc
+- Kind
+- clusterctl
+- kubectl
 
-## Local (hacking) Development
+### Local (hacking) Development
 
 1. Run a kind create cluster with the following config object
 
@@ -24,6 +24,3 @@ nodes:
 ```
 
 2. Install CAPI `clusterctl init --infrastructure docker`
-
-3. Disable the kubeadm deployments or delete
-4. Delete the kubeadmin mutating validating + admission webhook

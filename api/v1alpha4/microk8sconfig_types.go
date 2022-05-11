@@ -97,6 +97,7 @@ type InitConfiguration struct {
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 type JoinConfiguration struct {
 	metav1.TypeMeta `json:",inline"`
+	SkipVerify      bool `json:"skipVerify"` // skipVerify is a flag that instructs microk8s to skip verifying the cluster before joining.
 }
 
 // MicroK8sConfigSpec defines the desired state of MicroK8sConfig
